@@ -17,6 +17,26 @@ All source datasets were pre-processed to ensure comparability for our trauma de
 For compatibility with the BERT-architecture, we split instances exceeding the 512-token limit into smaller segments. 
 
 
+## Running Experiments
 
+### Setup
+The following steps are required to run the code in this repository using a dedicated anaconda environment.
 
-## Reproducing Experiments
+### Creating an Anaconda Environment
+Make sure you have a working installation of anaconda on your system and go to the main directory of this repository in your terminal.
+Then install the requirements into a new conda environment named ```trauma-language``` by running the following commands 
+```
+conda env create -f environment.yml
+```
+Then run
+```
+conda activate trauma-language
+```
+
+### Add new environment to Jupyter notebook.
+The computation of the explanations are implemented in the folder ```notebooks```. To add the kernel to an existing jupyter installation, activate the ```trauma-language``` python kernel and run
+
+```
+python -m ipykernel install --user --name trauma-language
+```
+
