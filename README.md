@@ -79,7 +79,7 @@ We would appreciate a reference to our paper if you find the ressources in this 
 
 ```
 @inproceedings{schirmer2024language,
-    title={The Language of Trauma: Modeling Traumatic Event Descriptions Across Domains with Explainable AI},
+    title={The Language of Trauma: Modeling Traumatic Event Descriptions Across Domains with Explainable {AI}},
     author={Schirmer, Miriam and Leemann, Tobias and Kasneci, Gjergji and Pfeffer, J{\"u}rgen and Jurgens, David},
     booktitle = "Findings of the Association for Computational Linguistics: EMNLP 2024",
     year = 2024,
