@@ -1,0 +1,47 @@
+{
+    "NGramLogisticRegression":
+    [
+        {"name": "n_gram_range", "at_init": true, "options": [[1, 1], [1, 2], [2, 3]]},
+        {"name": "C", "at_init": false, "logrange": [1e-2, 1e1]},
+        {"name": "penalty", "at_init": false, "options": ["l2", "none"]}
+    ],
+    "BERTmodel": 
+    [
+        {"name": "n_layers", "at_init": true, "intrange": [1, 16]},
+        {"name": "n_heads", "at_init": true, "options": [2, 4, 8, 16]},
+        {"name": "d_hidden", "at_init": true, "options": [384, 768, 1536]},
+        {"name": "lr", "at_init": false, "logrange": [1e-6, 1e-2]}
+    ],
+    "BERTPretrainedmodel": 
+    [
+        {"name": "n_layers", "at_init": true, "intrange": [1, 12]},
+        {"name": "lr", "at_init": false, "logrange": [1e-6, 1e-2]}
+    ],
+    "RoBERTamodel": 
+    [
+        {"name": "n_layers", "at_init": true, "intrange": [1, 16]},
+        {"name": "n_heads", "at_init": true, "options": [2, 4, 8, 16]},
+        {"name": "d_hidden", "at_init": true, "options": [384, 768, 1536]},
+        {"name": "lr", "at_init": false, "logrange": [1e-6, 1e-2]}
+    ],
+    "RoBERTaPretrainedmodel": 
+    [
+        {"name": "n_layers", "at_init": true, "intrange": [1, 12]},
+        {"name": "lr", "at_init": false, "logrange": [1e-6, 1e-2]}
+    ],
+    "NaiveBayesBOWmodel":
+    [
+        {"name": "multiplicities", "at_init": true, "options": [true, false]},
+        {"name": "alpha", "at_init": false, "logrange": [1.0, 1000.0]}
+    ],
+    "FeedForwardModel":
+    [
+        {"name": "hidden_dim1", "at_init": true, "options": [50, 100, 200]},
+        {"name": "hidden_dim2", "at_init": true, "options": [20, 50, 80, 100, 250, "none"]},
+        {"name": "lr", "at_init": false, "logrange": [1e-6, 1e-2]}
+    ],
+    "OpenAImodel":
+    [
+        {"name": "target_model", "at_init": true, "options": ["gpt-3.5-turbo", "gpt-4-turbo", "gpt-3.5-turbo-1106"]}
+    ]
+}
