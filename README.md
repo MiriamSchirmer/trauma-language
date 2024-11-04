@@ -64,6 +64,9 @@ Make sure the permissions are set correctly, otherwise run ```chmod 744 search_t
 The trained models will be saved in a new folder named ```models``` and log files will be saved in a new folder names ```logs```.
 After training, the trained models can be scrutinized using XAI techniques.
 
+**OpenAI-Models:**
+Using the OpenAI models requires an API key. Please enter your credentials (organization and key) in the file ```openai.json``` in the respective fields.
+
 ### Computing explanations
 
 To compute explanations, we provide Jupyter notebooks in the folder ```notebooks``` with more detailed instructions.
