@@ -40,3 +40,49 @@ The computation of the explanations are implemented in the folder ```notebooks``
 python -m ipykernel install --user --name trauma-language
 ```
 
+### Training models
+
+We provide the training script ```search_train.sh``` which automatically performs the hyperparameter search and then trains the best performing configuration with 5 different seeds.
+It is called as follows:
+
+```
+.\search_train.sh <model_arch> <dataset> <device>
+```
+
+where ```model_arch``` specifies the machine learning model type that should be trained (implemented in ```code/classification_models.py```). Supported architectures are
+* ```FeedForwardModel```
+* ```NaiveBayesBOWmodel```
+* ```NGramLogisticRegression```
+* ```BERTmodel```, ```BERTPretrainedmodel```, 
+* ```RoBERTamodel```, ```RoBERTaPretrainedmodel```
+* ```OpenAImodel```
+
+The parameter ```dataset``` can be either ```GTC```, ```PTSD```, ```Counseling```, ```Incels```, or ```All```. Argument ```device``` refers to a valid torch device, e.g. ```cuda:0```.
+
+Make sure the permissions are set correctly, otherwise run ```chmod 744 search_train.sh```.
+
+The trained models will be saved in a new folder named ```models``` and log files will be saved in a new folder names ```logs```.
+After training, the trained models can be scrutinized using XAI techniques.
+
+### Computing explanations
+
+To compute explanations, we provide Jupyter notebooks in the folder ```notebooks``` with more detailed instructions.
+See 
+* ```BERT_SLALOM.ipynb``` for SLALOM explanations
+* ```ConceptExplanations.ipynb````for Conceptual explanation (ConceptSHAP)
+* ```Shap.ipynb```for Shapley value explanations
+
+
+## Reference
+
+We would appreciate a reference to our paper if you find the ressources in this repository useful.
+
+```
+@inproceedings{schirmer2024language,
+    title={The Language of Trauma: Modeling Traumatic Event Descriptions Across Domains with Explainable AI},
+    author={Schirmer, Miriam and Leemann, Tobias and Kasneci, Gjergji and Pfeffer, J{\"u}rgen and Jurgens, David
+    booktitle = "Findings of the Association for Computational Linguistics: EMNLP 2024",
+    year = 2024,
+    publisher = "Association for Computational Linguistics",
+}
+```
