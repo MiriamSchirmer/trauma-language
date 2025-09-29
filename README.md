@@ -17,6 +17,12 @@ All source datasets were pre-processed to ensure comparability for our trauma de
 For compatibility with the BERT-architecture, we split instances exceeding the 512-token limit into smaller segments. 
 
 
+# Dataset Description
 
+| Dataset                  | Description                                                                 | Size & Balance                                | Annotator Agreement                |
+|---------------------------|-----------------------------------------------------------------------------|-----------------------------------------------|-------------------|
+| **Genocide Transcript Corpus (GTC)** | Witness statements from 90 different cases across three genocide tribunals. | 15,845 samples (trauma: 13.54%)               | n/a               |
+| **PTSD Subreddit (PTSD)** | Post-Traumatic Stress Disorder (PTSD) subset of the Reddit Mental Health Dataset. | 1,200 samples (trauma: 47.19%)                | (1) α = .63<br>(2) F1 = .77 |
+| **Counseling Dataset**    | Queries submitted by users seeking advice, with answers provided by professionals. | 1,200 samples (trauma: 8.16%)                 | (1) α = .69<br>(2) F1 = .95 |
+| **Incel Dataset**         | Posts from the Incel online forum *incels.is*.                              | 300 samples (trauma: 2.67%)                   | (1) α = .43<br>(2) F1 = .78 |
 
-## Reproducing Experiments
